@@ -536,6 +536,8 @@ GameObject:
   - component: {fileID: 502729693}
   - component: {fileID: 502729692}
   - component: {fileID: 502729691}
+  - component: {fileID: 502729697}
+  - component: {fileID: 502729696}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Untagged
@@ -663,6 +665,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &502729696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502729690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: dafc073eba5ce3842a2a24034890ada9, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ae0d1229-8d35-440a-a923-5a1632865ef8
+    m_ActionName: PlayerOne/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 502729697}
+        m_TargetAssemblyTypeName: PlayerOneScript, Assembly-CSharp
+        m_MethodName: OnMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0e224c84-b34d-48b0-a199-3ca3875ab1c9
+    m_ActionName: 'PlayerOne/Movement02[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 502729697}
+        m_TargetAssemblyTypeName: PlayerOneScript, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 81db12aa-673e-4881-b84b-38ee36d374b7
+    m_ActionName: 'PlayerOne/Jump[/Keyboard/enter,/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 502729697}
+        m_TargetAssemblyTypeName: PlayerOneScript, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dabc4beb-7216-43b8-baa6-3570ba364374
+    m_ActionName: 'PlayerOne/Look[/SwitchProControllerHID/rightStick/down]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0fb8a023-e9ea-40ec-acae-9e7331bf28f9
+    m_ActionName: PlayerTwo/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 11f6f54a-9969-48f2-9a2b-d3498dd742ec
+    m_ActionName: 'PlayerTwo/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ae9c31cc-1391-411a-9b3b-4bfb7fcd9dc8
+    m_ActionName: 'PlayerTwo/Jump[/Keyboard/space,/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3e95f8a-c5d6-4880-813f-e975e330b6c1
+    m_ActionName: 'PlayerTwo/Look[/SwitchProControllerHID/rightStick/down]'
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: PlayerOne
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &502729697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502729690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fcf50e34ca03ef4eb96717745f0a687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOneScript
+  moveSpeed: 5
+  jumpStep: 1
+  rotateSpeed: 180
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,14 +868,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1121211732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a644866d6577809408d1d92ab8074312, type: 3}
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TwoPlayersOneKeyboard
-  p1Move: {fileID: -681454903591070812, guid: dafc073eba5ce3842a2a24034890ada9, type: 3}
-  p2Move: {fileID: -3402712605598599817, guid: dafc073eba5ce3842a2a24034890ada9, type: 3}
-  p1: {fileID: 502729695}
-  p2: {fileID: 24000814}
-  speed: 5
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
+  m_NotificationBehavior: 2
+  m_MaxPlayerCount: -1
+  m_AllowJoining: 1
+  m_JoinBehavior: 2
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 93747c6d-f045-4c35-9307-9397afc4b5c0
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 0}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1875893316
 GameObject:
   m_ObjectHideFlags: 0
