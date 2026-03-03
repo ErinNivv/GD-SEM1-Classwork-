@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerOneScript : MonoBehaviour
+public class PlayerTwoScript : MonoBehaviour
 {
-    [Header("Shooting")]
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private float projectileSpeed = 12f;
+    //[Header("Shooting")]
+    //[SerializeField] private GameObject projectilePrefab;
+    //[SerializeField] private Transform firePoint;
+    //[SerializeField] private float projectileSpeed = 12f;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -15,16 +15,19 @@ public class PlayerOneScript : MonoBehaviour
     private Vector2 lookInput;
     private Vector2 moveInput;
 
+    [SerializeField] private GameObject shieldVisual;
+    private bool isShielding;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-        float y = lookInput.x *rotateSpeed * Time.deltaTime;
+        float y = lookInput.x * rotateSpeed * Time.deltaTime;
         transform.Rotate(0f, y, 0f, Space.World);
 
         Vector3 move3 = new Vector3(moveInput.x, 0f, moveInput.y) * moveSpeed * Time.deltaTime;
@@ -47,11 +50,9 @@ public class PlayerOneScript : MonoBehaviour
         transform.position += Vector3.up * jumpStep;
     }
 
-    public void OnShoot(InputAction.CallbackContext context)
+    public void OnShield(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
-
-        var proj = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        proj.GetComponent<Rigidbody>().linearVelocity = firePoint.forward * projectileSpeed;
+        isShielding = context.ReadValueAsButton();
+        shieldVisual.SetActive(isShielding);
     }
 }
